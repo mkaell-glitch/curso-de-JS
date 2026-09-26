@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qual pais voce mora?</title>
+</head>
+<body>
+    <h1>seletor de pais</h1>
+    qual pais voce mora?<input type="text" name="pais" id="pais">
+    <input type="button" value="confirmar" name="confirm" id="confirm" onclick="analise()">
+    <div id="res"></div>
+    <script>
+        function analise() {
+            var pais = window.document.querySelector(`input#pais`)
+            var res = window.document.querySelector(`div#res`)
+            var confirm = String(pais.value)
+
+            if (pais == 'brasil') {
+                res.innerHTML += `voce e brasileiro!`
+            }
+            else {
+                res.innerHTML += `voce e estrangeiro!`
+            }
+
+            }
+    </script>
+</body>
+</html>
